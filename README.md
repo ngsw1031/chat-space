@@ -41,15 +41,6 @@
 - belongs_to :user
 - belongs_to :group
 
-## groups_messages テーブル
-|Column|Type|Options|
-|------|----|-------|
-|group_id|integer|null: false, foreign_key: true|
-|massage_id|integer|null: false, foreign_key: true|
-### groups_messages Association
-- belongs_to :message
-- belongs_to :group
-
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
