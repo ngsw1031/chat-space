@@ -18,7 +18,7 @@
 |user_id|integer|null: false, foreign_key: true|
 |massage_id|integer|null: false, foreign_key: true|
 ### groups Association
-- has_many :massage
+- has_many :message
 - has_many :group_users
 
 ## groups_usersテーブル
