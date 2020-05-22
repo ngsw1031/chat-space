@@ -7,7 +7,6 @@
 |nickname|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
-
 ### users Association
 - has_many :messages
 - has_many :users_groups
@@ -27,7 +26,6 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-
 ### groups_users Association
 - belongs_to :group
 - belongs_to :user
@@ -41,6 +39,15 @@
 ### messages Association
 - belongs_to :user
 - has_many :groups
+
+## groups_massages テーブル
+|Column|Type|Options|
+|------|----|-------|
+|group_id|integer|null: false, foreign_key: true|
+|massage_id|integer|null: false, foreign_key: true|
+### groups Association
+- belongs_to :massage
+- belongs_to :group
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
