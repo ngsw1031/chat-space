@@ -9,8 +9,7 @@
 |password|string|null: false|
 ### users Association
 - has_many :messages
-- has_many :groups
-- has_many :users_groups
+- has_many :groups, through: :groups_users
 
 ## groupsテーブル
 |Column|Type|Options|
@@ -18,8 +17,7 @@
 |name|string|null: false|
 ### groups Association
 - has_many :messages
-- has_many :users
-- has_many :group_users
+- has_many :users, through: :groups_users
 
 ## groups_usersテーブル
 |Column|Type|Options|
