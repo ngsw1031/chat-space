@@ -8,7 +8,7 @@
 |email|string|null: false|
 |password|string|null: false|
 
-### Association
+### users Association
 - has_many :messages
 - has_many :users_groups
 
