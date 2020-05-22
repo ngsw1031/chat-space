@@ -35,10 +35,11 @@
 |------|----|-------|
 |text|text||
 |image|text||
-|user_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 ### messages Association
 - belongs_to :user
-- has_many :groups
+- belongs_to :group
 
 ## groups_messages テーブル
 |Column|Type|Options|
