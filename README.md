@@ -15,9 +15,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|massage_id|integer|null: false, foreign_key: true|
+|name|string|null: false|
 ### groups Association
 - has_many :message
 - has_many :group_users
