@@ -40,12 +40,12 @@
 - belongs_to :user
 - has_many :groups
 
-## groups_massages テーブル
+## groups_messages テーブル
 |Column|Type|Options|
 |------|----|-------|
 |group_id|integer|null: false, foreign_key: true|
 |massage_id|integer|null: false, foreign_key: true|
-### groups Association
+### groups_messages Association
 - belongs_to :message
 - belongs_to :group
 
