@@ -9,6 +9,7 @@
 |password|string|null: false|
 ### users Association
 - has_many :messages
+- has_many :groups
 - has_many :users_groups
 
 ## groupsテーブル
