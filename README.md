@@ -46,7 +46,7 @@
 |group_id|integer|null: false, foreign_key: true|
 |massage_id|integer|null: false, foreign_key: true|
 ### groups Association
-- belongs_to :massage
+- belongs_to :message
 - belongs_to :group
 
 This README would normally document whatever steps are necessary to get the
