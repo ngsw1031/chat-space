@@ -8,39 +8,91 @@
   width: 100vw;
 }
 
-
 .side-bar {
   height: 100%;
   width: 300px;
+  color: #ffffff;
+
+    &__user {
+      height: 100px;
+      background-color: #253141;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    
+      &--box {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        line-height: 20px;
+        font-weight: bold;
+        margin: 0 auto;
+     
+
+        &__name {
+          font-size: 16px;
+        }
+
+        &__icons{
+          width: 60px;
+          display: flex;
+          justify-content: flex-end;
+
+
+          &__new-group {  
+            margin-right: 5px;
+          }
+            .fas{
+              color: #ffffff;
+            }
+          &__edit-user {
+          }
+            .fas{
+              color: #ffffff;
+            }
+        }
+      }
+    }
+
+    &__group-list {
+    height: calc(100% - 100px);
+    background-color: #2f3e51;
+    padding: 0 20px;
+   
+
+      &__block {
+        padding-top: 20px;
+        margin-bottom: 40px;
+          &--name {
+          font-size: 15px;
+          margin-bottom: 5px;
+          }
+          &--info {
+          font-size: 11px;
+          }
+      }
+  }
 }
 
-.side-bar__user {
-  height: 100px;
-  background-color: #253141;
-}
 
-.side-bar__group-list {
-  height: calc(100% - 100px);
-  background-color: #2f3e51;
-}
 
 .main-chat {
   height: 100%;
   width: calc(100% - 300px);
-}
 
-.main-chat__group-info {
-  height: 100px;
-  background-color: #ffffff;
-  border-bottom-color: #eeeeee;
-}
+    &__group-info {
+    height: 100px;
+    background-color: #ffffff;
+    border-bottom-color: #eeeeee;
+    }
 
-.main-chat__message-list{
-  height: calc(100% - 100px - 90px);
-  background-color: #fafafa;
-}
+    &__message-list{
+    height: calc(100% - 100px - 90px);
+    background-color: #fafafa;
+    }
 
-.main-chat__message-form{
-  height: 90px;
-  background-color: #d2d2d2;
+    &__message-form{
+    height: 90px;
+    background-color: #d2d2d2;
+    }
 }
