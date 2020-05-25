@@ -1,5 +1,45 @@
 .main-chat
   .main-chat__group-info
+    .main-chat__group-info__current
+      .main-chat__group-info__current__name
+      現在のグループ
+      %ul.main-chat__group-info__current__member
+        %li.main-chat__group-info__current__member__list
+          Menber:○○○○        
+    .main-chat__group-info__edit-btn
+      = link_to "#" do
+        Edit
+
   .main-chat__message-list
+    .main-chat__message-list__block
+      .main-chat__message-list__block__name
+        masa
+        .main-chat__message-list__block__name__time
+          2020/05/25(Mon) 12:36:39
+      .main-chat__message-list__block__message
+        こんにちは
+
+
+    .main-chat__message-list__block
+      .main-chat__message-list__block__name
+        masa
+        .main-chat__message-list__block__name__time
+          2020/05/25(Mon) 13:36:39
+      .main-chat__message-list__block__message
+        こんばんは
+
+
   .main-chat__message-form
+    .main-chat__message-form__block
+      .main-chat__message-form__block__input
+        %input{type: "text" ,placeholder: "Type a message", class: "main-chat__message-form__block__input__comment" }
+
+        -# .main-chat__message-form__block__input__image-icon
+        %label{class: "main-chat__message-form__block__input__label"}
+          = icon('fas', 'image')
+          %input{type: "file" ,class:"main-chat__message-form__block__input__label__file"}
+
+      .main-chat__message-form__block--send-btn
+        = link_to "#" do
+          Send
   
