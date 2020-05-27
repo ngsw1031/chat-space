@@ -55,17 +55,25 @@
     &__group-list {
     height: calc(100% - 100px);
     background-color: #2f3e51;
-    padding: 0 20px;   
-
+    padding: 0 20px;
+    overflow: scroll;
       &__block {
         padding-top: 20px;
         margin-bottom: 40px;
           &--name {
           font-size: 15px;
           margin-bottom: 5px;
+          color: $white-color
+          }
+          a{
+            text-decoration: none;
           }
           &--info {
           font-size: 11px;
+          color: $white-color
+          }
+          a{
+            text-decoration: none;
           }
       }
   }
