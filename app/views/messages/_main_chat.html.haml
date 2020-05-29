@@ -2,42 +2,25 @@
   .main-chat__group
     .main-chat__group__current
       .main-chat__group__current__name
-      現在のグループ
+        = @group.name
       %ul.main-chat__group__current__member
         %li.main-chat__group__current__member__list
-          Menber:○○○○        
+          Menber: 
+          - @group.users.each do |user|
+            = user.name
     .main-chat__group__btn
-      = link_to "#" do
+      = link_to edit_group_path(current_user.id) do
         Edit
 
   .main-chat__message
-    .main-chat__message__block
-      .main-chat__message__block__name
-        masa
-        .main-chat__message__block__name__time
-          2020/05/25(Mon) 12:36:39
-      .main-chat__message__block__list
-        こんにちは
-
-
-    .main-chat__message__block
-      .main-chat__message__block__name
-        masa
-        .main-chat__message__block__name__time
-          2020/05/25(Mon) 13:36:39
-      .main-chat__message__block__list
-        こんばんは
-
+    = render @messages
 
   .main-chat__form
-    .main-chat__form__block
-      .main-chat__form__block__input
-        %input{type: "text" ,placeholder: "Type a message", class: "main-chat__form__block__input__comment" }
-
-        %label{class: "main-chat__form__block__input__label"}
-          = icon('fas', 'image')
-          %input{type: "file" ,class:"main-chat__form__block__input__label__file"}
-      .main-chat__form__block--btn
-        = link_to "#" do
-          Send
-  
+    = form_for [@group, @message] do |f|
+      .main-chat__form__content
+        = f.text_field :content, class: 'main-chat__form__content__message', placeholder: 'type a message'
+        .main-chat__form__content__block
+          = f.label :image, class: ".main-chat__form__content__block__imege" do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: "hidden"
+      = f.submit 'Send', class: 'main-chat__form__btn'
