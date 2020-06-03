@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module ChatSpace
   class Application < Rails::Application
     config.time_zone = 'Tokyo'
-    config.generators do |g|  #12行〜15行は作成しない為に記述
+    config.generators do |g|
       g.stylesheets false
       g.javascripts false
       g.helper false
