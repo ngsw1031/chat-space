@@ -2,22 +2,22 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-        `<div class="main-chat__message__block" data-message-id=${message.id}>
-          <div class="main-chat__message__block">
-            <div class="main-chat__message__block__name">
+       `<div class="main-chat__message__block" data-message-id=${message.id}>
+          <div class="umain-chat__message__block">
+            <div class=".main-chat__message__block__name">
               ${message.user_name}
             </div>
             <div class="main-chat__message__block__name__time">
               ${message.created_at}
             </div>
           </div>
-          <div class="main-chat__message__block__list">
+          <div class=".main-chat__message__block__list">
             <p class="main-chat__message__block__list__content">
               ${message.content}
             </p>
           </div>
           <img src=${message.image} >
-         </div>`
+        </div>`
       return html;
     } else {
       let html =
@@ -66,6 +66,7 @@ $(function(){
   })
   let reloadMessages = function() {
     let last_message_id = $('.main-chat__message__block:last').data("message-id");
+    console.log(last_message_id)
     $.ajax({
       url: "api/messages",
       type: 'get',
@@ -78,8 +79,8 @@ $(function(){
         $.each(messages, function(i, message){
           insertHTML += buildHTML(message)
         });
-        $(".main-chat__message__block").append(insertHTML);
-        $('.main-chat__message__block').animate({ scrollTop: $('.mmain-chat__message__block')[0].scrollHeight});
+        $('.main-chat__message').append(insertHTML);
+        $('.main-chat__message').animate({ scrollTop: $('.main-chat__message')[0].scrollHeight});
       }
     })
     .fail(function() {
