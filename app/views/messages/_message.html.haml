@@ -1,12 +1,10 @@
 .main-chat__message__block{data: {message: {id: message.id}}}
   .main-chat__message__block__name
     = message.user.name
-  .main-chat__message__block__name__time
-    = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+    .main-chat__message__block__name__time
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
   .main-chat__message__block__list
     - if message.content.present?
       %p.main-chat__message__block__list__content
         = message.content
     = image_tag message.image.url, class: 'main-chat__message__block__list__image' if message.image.present?
-
-    

@@ -4,36 +4,36 @@ $(function(){
       let html =
        `<div class="main-chat__message__block" data-message-id=${message.id}>
           <div class="umain-chat__message__block">
-            <div class=".main-chat__message__block__name">
+            <div class="main-chat__message__block__name">
               ${message.user_name}
+              <div class="main-chat__message__block__name__time">
+                ${message.created_at}
+              </div>
             </div>
-            <div class="main-chat__message__block__name__time">
-              ${message.created_at}
+            <div class="main-chat__message__block__list">
+              <p class="main-chat__message__block__list__content">
+                ${message.content}
+              </p>
             </div>
+            <img src=${message.image} >
           </div>
-          <div class=".main-chat__message__block__list">
-            <p class="main-chat__message__block__list__content">
-              ${message.content}
-            </p>
-          </div>
-          <img src=${message.image} >
         </div>`
       return html;
     } else {
       let html =
        `<div class="main-chat__message__block" data-message-id=${message.id}>
           <div class="umain-chat__message__block">
-            <div class=".main-chat__message__block__name">
+            <div class="main-chat__message__block__name">
               ${message.user_name}
+              <div class="main-chat__message__block__name__time">
+                ${message.created_at}
+              </div>
             </div>
-            <div class="main-chat__message__block__name__time">
-              ${message.created_at}
+            <div class="main-chat__message__block__list">
+              <p class="main-chat__message__block__list__content">
+                ${message.content}
+              </p>
             </div>
-          </div>
-          <div class=".main-chat__message__block__list">
-            <p class="main-chat__message__block__list__content">
-              ${message.content}
-            </p>
           </div>
         </div>`
       return html;
